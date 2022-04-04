@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main()
@@ -57,13 +58,13 @@ int main()
 		cout << "False" << endl;
 	}
 	cout << "Zipcode: " << zipcode << endl;
-	cout << "Wage: $" << wage << "/hr" << endl;
+	cout << "Wage: $" << fixed << setprecision(2) << wage << "/hr" << endl;
 	cout << "Number of Days Worked: " << daysWorked << endl;
 	for (int i = 0; i < daysWorked; i++) {
 		cout << "Hours worked for day " << i + 1 << ": " << hoursWorkedPerDay[i] << endl;
 	}
 	cout << "Total hours: " << totalHours << endl;
-	cout << "Gross income: $" << grossIncome << endl;
-	cout << "Net income: $" << netIncome << endl;
+	cout << "Gross income: $" << fixed << setprecision(2) << grossIncome << endl;
+	cout << "Net income: $" << fixed << setprecision(2) << netIncome << endl;
 }
 
