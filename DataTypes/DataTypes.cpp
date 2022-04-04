@@ -3,8 +3,8 @@ using namespace std;
 
 int main()
 {
-	string name;
-	unsigned char initial;
+	string firstName;
+	unsigned char lastInitial;
 	unsigned short int age;
 	bool isAdult = false;
 	unsigned int zipcode;
@@ -14,10 +14,8 @@ int main()
 
 	const float TAX = 0.1f;
 
-	cout << "Enter first name: ";
-	cin >> name;
-
-	initial = name[0];
+	cout << "Enter first name and last initial: ";
+	cin >> firstName >> lastInitial;
 
 	cout << "Enter age: ";
 	cin >> age;
@@ -50,8 +48,7 @@ int main()
 
 	float netIncome = grossIncome * (1 - TAX);
 
-	cout << "\nFirst name: " << name << endl;
-	cout << "Initial: " << initial << endl;
+	cout << "\nName: " << firstName << " " << lastInitial << endl;
 	cout << "Age: " << age << endl;
 	cout << "Adult: ";
 	if (isAdult) {
