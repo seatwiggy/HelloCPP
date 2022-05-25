@@ -3,14 +3,14 @@
 void Motorcycle::Read(ostream& ostream, istream& istream) {
 	Vehicle::Read(ostream, istream);
 
-	ostream << "Enter number of Doors: ";
+	ostream << "Enter handlebar length: ";
 	istream >> m_handlebarLength;
 }
 
 void Motorcycle::Write(std::ostream& ostream) {
 	Vehicle::Write(ostream);
 
-	ostream << "Number of Doors: " << m_handlebarLength << endl;
+	ostream << "Handlebar length: " << m_handlebarLength << endl;
 }
 
 void Motorcycle::Read(ifstream& istream) {

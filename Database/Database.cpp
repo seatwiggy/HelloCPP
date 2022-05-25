@@ -1,16 +1,15 @@
 #include "Database.h"
 
-const string filename = "testFile.txt";
+const string filename = "dbFile.txt";
 
-bool Database::Save(Vehicle& animal) {
+bool Database::Save(Vehicle& vehicle) {
 	ofstream file(filename, ofstream::out | ofstream::app);
 
 	if (file.is_open()) {
-		file << animal;
+		file << vehicle;
 		file.close();
 		return true;
 	}
-
 	return false;
 }
 
@@ -33,7 +32,6 @@ bool Database::DisplayAll(ostream& ostream) {
 			ostream << *vehicle;
 		}
 	}
-	return false;
 }
 
 bool Database::Empty() {

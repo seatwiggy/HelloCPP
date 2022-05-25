@@ -13,7 +13,7 @@ int main() {
 	Database db;
 
 	int iMenu = 0;
-	while (iMenu != 5) {
+	while (iMenu != 4) {
 		cout << "Enter menu option: " << endl;
 		cout << "1) Create" << endl;
 		cout << "2) Display All" << endl;
@@ -49,6 +49,7 @@ int main() {
 		case 2:
 			// Display All
 			db.DisplayAll(cout);
+			break;
 		case 3:
 			// Clear
 			db.Empty();
